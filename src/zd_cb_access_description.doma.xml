@@ -3,12 +3,13 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD01V>
-    <DOMNAME>ZD_CB_CATEGORIES</DOMNAME>
+    <DOMNAME>ZD_CB_ACCESS_DESCRIPTION</DOMNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
     <DATATYPE>CHAR</DATATYPE>
-    <LENG>000001</LENG>
-    <OUTPUTLEN>000001</OUTPUTLEN>
-    <DDTEXT>Categories</DDTEXT>
+    <LENG>000060</LENG>
+    <OUTPUTLEN>000060</OUTPUTLEN>
+    <LOWERCASE>X</LOWERCASE>
+    <DDTEXT>SAccess Description</DDTEXT>
     <DOMMASTER>E</DOMMASTER>
    </DD01V>
   </asx:values>
