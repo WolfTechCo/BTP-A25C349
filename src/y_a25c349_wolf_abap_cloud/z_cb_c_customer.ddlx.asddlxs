@@ -1,0 +1,62 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Customer',
+    typeNamePlural: 'Customers',
+    imageUrl: 'URLImage',
+    title: {
+        type: #STANDARD,
+        value: 'Name'
+    },
+    description: {
+        type: #STANDARD,
+        value: 'CustomerId'
+    }
+}
+annotate entity Z_CB_C_CUSTOMER with
+{
+  @UI: {
+     facet : [
+        { id: 'CustomerDetails',
+          label : 'Customer',
+          type: #COLLECTION,
+          position: 10 },
+        { id: 'Customer',
+          parentId: 'CustomerDetails',
+          label : 'Information',
+          type: #FIELDGROUP_REFERENCE,
+          targetQualifier: 'CustomerDetails',
+          position: 10 },
+        { id: 'Category',
+          label : 'Categories',
+          type: #LINEITEM_REFERENCE,
+          targetElement: '_AccessCategory',
+          position: 20 }] }          
+
+  @UI:{
+  fieldGroup: [{ qualifier: 'CustomerDetails',
+                 position: 10 }]}
+  CustomerId;
+
+  @UI:{
+    lineItem: [{ position: 10,
+                 importance: #HIGH }]}
+  Name;
+  @UI:{
+    lineItem: [{ position: 20,
+                 importance: #HIGH }]}
+  Lastname;
+
+  @UI:{
+  fieldGroup: [{ qualifier: 'CustomerDetails',
+                 position: 20 }]}
+  @EndUserText: {
+    label: 'Fullname',
+    quickInfo: 'FullName' }
+  FullName;
+  @UI:{
+    fieldGroup: [{ qualifier: 'CustomerDetails',
+                   position: 30 }],
+    lineItem: [{ position: 30,
+                 importance: #HIGH }]}
+  Email;
+}

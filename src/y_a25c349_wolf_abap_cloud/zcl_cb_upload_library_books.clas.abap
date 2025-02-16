@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_cb_upload_library_books IMPLEMENTATION.
+CLASS ZCL_CB_UPLOAD_LIBRARY_BOOKS IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     DATA: access_categories TYPE TABLE OF zcb_acc_category,
@@ -194,5 +196,4 @@ CLASS zcl_cb_upload_library_books IMPLEMENTATION.
     out->write( 'DONE!' ).
 
   ENDMETHOD.
-
 ENDCLASS.

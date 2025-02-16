@@ -1,0 +1,14 @@
+@Metadata.layer: #CORE
+annotate entity Z_CB_I_ACC_CATEGORY
+    with 
+{
+  @UI:{
+    lineItem: [{ position: 10,
+                 importance: #HIGH }]}
+    CategoryId;
+  @UI:{
+    lineItem: [{ position: 20,
+                 importance: #HIGH }]}    
+    Description;
+    
+}

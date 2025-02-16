@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service definition Virtual Book Library'
+@ObjectModel.leadingEntity.name: 'Z_CB_C_VIRTUAL_BOOK_LIBRARY'
+define service Z_CB_UI_VIRTUAL_BOOK_LIBRARY {
+  expose Z_CB_C_VIRTUAL_BOOK_LIBRARY as VirtualBookLibrary;
+  expose Z_CB_C_CUSTOMER             as Customer;
+  expose Z_CB_I_ACC_CATEGORY         as AccessCategory;
+}
