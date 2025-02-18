@@ -12,6 +12,8 @@
         value: 'CustomerId'
     }
 }
+
+@Search.searchable: true
 annotate entity Z_CB_C_CUSTOMER with
 {
   @UI: {
@@ -30,17 +32,27 @@ annotate entity Z_CB_C_CUSTOMER with
           label : 'Categories',
           type: #LINEITEM_REFERENCE,
           targetElement: '_AccessCategory',
-          position: 20 }] }          
+          position: 20 }] }
 
   @UI:{
-  fieldGroup: [{ qualifier: 'CustomerDetails',
-                 position: 10 }]}
+    fieldGroup: [{ qualifier: 'CustomerDetails',
+                   position: 10 }]}
   CustomerId;
+
+  @Search: {
+      defaultSearchElement: true,
+      ranking: #HIGH,
+      fuzzinessThreshold: 0.8 }
 
   @UI:{
     lineItem: [{ position: 10,
                  importance: #HIGH }]}
   Name;
+  @Search: {
+      defaultSearchElement: true,
+      ranking: #HIGH,
+      fuzzinessThreshold: 0.8 }
+
   @UI:{
     lineItem: [{ position: 20,
                  importance: #HIGH }]}

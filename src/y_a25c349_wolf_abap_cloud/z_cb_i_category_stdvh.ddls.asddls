@@ -12,7 +12,9 @@
     supportedCapabilities: [#VALUE_HELP_PROVIDER, #SEARCHABLE_ENTITY],
     modelingPattern: #VALUE_HELP_PROVIDER }
 @Search.searchable: true
-@Consumption.ranked: true
+@Consumption: { ranked: true,
+                valueHelpDefault: {
+                    fetchValues: #AUTOMATICALLY_WHEN_DISPLAYED } }
 define view entity Z_CB_I_CATEGORY_STDVH
   as select from Z_CB_I_CATEGORY
 {

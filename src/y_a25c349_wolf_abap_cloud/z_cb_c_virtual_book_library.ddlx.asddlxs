@@ -28,7 +28,6 @@ annotate entity Z_CB_C_VIRTUAL_BOOK_LIBRARY with
            position: 10},
          { id: 'Book',
            parentId: 'BookDetails',
-    //      label : 'Detalles',
            type: #FIELDGROUP_REFERENCE,
            targetQualifier: 'BookDetails',
            position: 10},
@@ -48,7 +47,7 @@ annotate entity Z_CB_C_VIRTUAL_BOOK_LIBRARY with
     selectionField: [{ position: 20 }]}
   @Consumption.valueHelpDefinition: [
     { entity:{ name: 'Z_CB_I_CATEGORY_STDVH',
-               element: 'CategoryId'} } ]
+               element: 'CategoryId'} }]
   @EndUserText: {
     label: 'Category',
     quickInfo: 'Category' }
@@ -62,7 +61,7 @@ annotate entity Z_CB_C_VIRTUAL_BOOK_LIBRARY with
     fieldGroup: [{ qualifier: 'BookDetails',
                    position: 30 }],
     lineItem: [{ position: 10,
-                 importance: #HIGH }],                   
+                 importance: #HIGH }],
     selectionField: [{ position: 10 }]}
   Title;
 
@@ -79,12 +78,12 @@ annotate entity Z_CB_C_VIRTUAL_BOOK_LIBRARY with
 
   @Consumption.valueHelpDefinition: [
     { entity:{ name: 'Z_CB_I_PUBLISHER_STDVH',
-               element: 'Publisher'} } ]
+               element: 'Publisher'} }]
   @UI:{
     fieldGroup: [{ qualifier: 'BookDetails',
                    position: 50 }],
     lineItem: [{ position: 30,
-                 importance: #HIGH }],                   
+                 importance: #HIGH }],
     selectionField: [{ position: 30 }]}
   Publisher;
 
@@ -115,7 +114,7 @@ annotate entity Z_CB_C_VIRTUAL_BOOK_LIBRARY with
   @UI.textArrangement: #TEXT_ONLY
   FormatType;
 
-  @UI: { 
+  @UI: {
     lineItem: [{ position: 70,
                  label: 'Sold',
                  importance: #HIGH,
@@ -129,8 +128,9 @@ annotate entity Z_CB_C_VIRTUAL_BOOK_LIBRARY with
     lineItem: [{ position: 80,
                  importance: #HIGH }]}
   Price;
-  
-      /* Associations */
-//      _Customer;
+
+  /* Associations */
+  @Search.defaultSearchElement: true
+  _Customer;
 
 }
